@@ -20,8 +20,6 @@ const ShopList = (props) => {
                                    key = { shop._id }
                                    name = { shop.name }
                                    photoURL = { shop.photoURL }
-                                   shopType = { shop.shopType }
-                                   description = { shop.description }
                                    id = { shop._id }
                               />
                          );

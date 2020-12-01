@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 const ShopCard = (props) => {
      return (
           <div className="ShopCard">
-               <img src={ props.photoURL } alt="logo" className="logo"/>
-               <p className="shopname">
+               <img src={ props.photoURL } alt="logo" className="ShopCardLogo"/>
+               <p className="ShopName">
                     { props.name }
                </p>
-               <p className="shopType">
+               <p className="ShopType">
                     { props.shopType }
                </p>
                <Link to={ '/shop/' + props.id } >
-                    <button className="order">
+                    <button className="OrderBtn">
                          ORDER
                     </button>
                </Link>

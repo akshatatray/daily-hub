@@ -7,6 +7,8 @@
      height: 60px;
      display: flex;
      margin: 0;
+     background: var(--secColor);
+     box-shadow: 5px 5px 30px -20px black;
 }
 .left, .center, .right {
      flex: 1;
@@ -21,7 +23,7 @@
 .nav-link {
      color: grey;
      font-size: 16px;
-     font-weight: 600;
+     font-weight: 500;
      letter-spacing: 1px;
      text-decoration: none;
      height: 36px;
@@ -31,9 +33,13 @@
      display: flex;
      flex-direction: column;
      justify-content: center;
+     transition: all .3s ease;
+}
+.nav-link:hover {
+     color: rgb(230, 230, 230);
 }
 .active-nav-link {
-     color: black;
-     border-radius: 8px;
-     background-color: rgb(245, 245, 245);
+     color: white;
+     font-weight: 600;
+     border-bottom: 2px solid var(--btnColor);
 }
