@@ -3,7 +3,11 @@ import thunk from 'redux-thunk';
 
 import reducers from './reducers';
 
-const initialState = {};
+const initialState = {
+  cart: [],
+  shops: [],
+  items: [],
+};
 
 const middleware = [thunk];
 

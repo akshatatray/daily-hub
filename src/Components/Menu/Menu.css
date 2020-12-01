@@ -1,0 +1,29 @@
+.Menu {
+     position: relative;
+     width: 930px;
+     padding-top: 120px;
+     margin: 100px auto 0 auto;
+     border-radius: var(--bdRd);
+     background-color: var(--card);
+     box-shadow: 5px 5px 20px -10px black;
+}
+.MenuShopName {
+     position: absolute;
+     font-size: var(--title);
+     left: 120px;
+     top: 43px;
+     margin: 0;
+     font-weight: 500;
+     font-family: var(--interFont);
+     font-style: normal;
+     color: var(--txtColor);
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+.MenuShopLogo {
+     position: absolute;
+     top: 30px;
+     left: 30px;
+     width: 60px;
+}

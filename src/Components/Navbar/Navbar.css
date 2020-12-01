@@ -13,6 +13,10 @@
 .left, .center, .right {
      flex: 1;
 }
+.right {
+     display: flex;
+     justify-content: center;
+}
 .nav {
      display: flex;
      justify-content: space-around;
@@ -21,6 +25,7 @@
      margin: 0;
 }
 .nav-link {
+     position: relative;
      color: grey;
      font-size: 16px;
      font-weight: 500;
@@ -42,4 +47,20 @@
      color: white;
      font-weight: 600;
      border-bottom: 2px solid var(--btnColor);
+}
+.cartWithQuant {
+     position: absolute;
+     top: -5px;
+     left: 15px;
+     width: 1.5em;
+     height: 1.5em;
+     border-radius: 50%;
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     justify-content: center;
+     background-color: var(--btnColor);
+     color: var(--txtColor);
+     font-family: var(--overpassFont);
+     font-weight: 600;
 }

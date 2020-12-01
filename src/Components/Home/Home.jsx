@@ -9,7 +9,6 @@ const Home = () => {
           <div className="Home">
                <Navbar />
                <ShopList />
-               Home Works!
           </div>
      )
 }

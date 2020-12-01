@@ -9,9 +9,6 @@ const ShopCard = (props) => {
                <p className="ShopName">
                     { props.name }
                </p>
-               <p className="ShopType">
-                    { props.shopType }
-               </p>
                <Link to={ '/shop/' + props.id } >
                     <button className="OrderBtn">
                          ORDER
