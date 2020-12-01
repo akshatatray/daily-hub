@@ -2,9 +2,10 @@
      position: relative;
      width: 930px;
      padding-top: 120px;
-     margin: 100px auto 0 auto;
+     padding-bottom: 30px;
+     margin: 100px auto 30px auto;
      border-radius: var(--bdRd);
-     background-color: var(--card);
+     background-color: var(--secColor);
      box-shadow: 5px 5px 20px -10px black;
 }
 .MenuShopName {
@@ -26,4 +27,10 @@
      top: 30px;
      left: 30px;
      width: 60px;
+}
+.back {
+     position: absolute;
+     top: 40px;
+     right: 45px;
+     cursor: pointer;
 }

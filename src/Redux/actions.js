@@ -23,7 +23,7 @@ export const getItems = (id) => (dispatch) => {
     .then((res) => {
       dispatch({
         type: "GET_ITEMS",
-        payload: res.data,
+        payload: res.data.shopItems,
       });
     })
     .catch((err) => {
@@ -53,3 +53,24 @@ export const getMenuInfo = (id) => (dispatch) => {
       });
     });
 };
+
+export const addItem = (item) => (dispatch) => {
+  dispatch({
+    type: "ADD_ITEM",
+    payload: item,
+  });
+}
+
+export const incItemQuantity = (id) => (dispatch) => {
+  dispatch({
+    type: "PLUS",
+    payload: id,
+  });
+}
+
+export const decItemQuantity = (id) => (dispatch) => {
+  dispatch({
+    type: "MINUS",
+    payload: id,
+  });
+}
