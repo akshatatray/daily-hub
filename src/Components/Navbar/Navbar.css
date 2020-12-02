@@ -39,20 +39,24 @@
      display: flex;
      flex-direction: column;
      justify-content: center;
+     border-radius: var(--bdRd);
      transition: all .3s ease;
 }
 .nav-link:hover {
      color: rgb(230, 230, 230);
+     border-radius: var(--bdRd);
+     background-color: #212838d7;
 }
 .active-nav-link {
      color: white;
      font-weight: 500;
-     border-bottom: 2px solid var(--btnColor);
+     border-radius: var(--bdRd);
+     background-color: #212838d7;
 }
 .cartWithQuant {
      position: absolute;
      top: -5px;
-     left: 15px;
+     left: 60px;
      width: 1.5em;
      height: 1.5em;
      border-radius: 50%;
@@ -75,10 +79,10 @@
      justify-content: center;
 }
 @media (max-width: 450px) {
-     .left, .right {
-          flex: 1;
-     }
      .center {
+          flex: 3;
+     }
+     .right, .left {
           flex: 2;
      }
 }

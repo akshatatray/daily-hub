@@ -2,7 +2,7 @@
      position: relative;
      width: calc(100% - 20px);
      max-width: 450px;
-     height: 190px;
+     height: 170px;
      margin: 10px auto;
      border-radius: 5px;
      background-color: var(--card);
@@ -19,8 +19,8 @@
      position: absolute;
      margin: 0;
      top: 10px;
-     right: 10px;
-     width: 220px;
+     left: 125px;
+     width: 65%;
      text-overflow: ellipsis;
      overflow: hidden;
      white-space: nowrap;
@@ -33,8 +33,8 @@
      position: absolute;
      margin: 0;
      top: 55px;
-     right: 10px;
-     width: 220px;
+     left: 125px;
+     width: 65%;
      text-overflow: ellipsis;
      display: -webkit-box;
      -webkit-line-clamp: 4;
@@ -49,8 +49,8 @@
      position: absolute;
      margin: 0;
      bottom: 10px;
-     right: 10px;
-     width: 220px;
+     left: 125px;
+     width: 65%;
      font-size: var(--bodyTxt);
      font-family: var(--overpassFont);
      font-weight: normal;
@@ -122,6 +122,12 @@
 }
 
 @media (max-width: 450px) {
+     .ItemCard {
+          height: 160px;
+     }
+     .itemName, .itemPrice, .description {
+          left: 110px;
+     }
      .itemImage {
           height: 85px;
           width: 85px;
