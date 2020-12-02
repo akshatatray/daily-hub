@@ -21,3 +21,8 @@
      color: var(--txtColor);
      letter-spacing: 1px;
 }
+@media (max-width: 450px) {
+     .Cart {
+          width: 96%;
+     }
+}

@@ -45,3 +45,9 @@
      font-weight: 500;
      font-size: var(--bodyTxt);
 }
+
+@media (max-width: 450px) {
+     .ShopCard {
+          margin: 10px auto;
+     }
+}

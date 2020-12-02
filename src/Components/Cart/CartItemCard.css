@@ -74,3 +74,24 @@
      color: var(--txtColor);
      text-align: center;
 }
+
+@media (max-width: 450px) {
+     .CartItemCard {
+          height: 130px;
+     }
+     .CartItemImage {
+          height: 105px;
+          width: 105px;
+     }
+     .CartItemName {
+          width: 200px;
+          font-size: 22px;
+     }
+     .CartItemDescription {
+          width: 200px;
+          top: 45px;
+     }
+     .CartItemPrice {
+          width: 200px;
+     }
+}

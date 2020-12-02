@@ -29,7 +29,7 @@ const Navbar = (props) => {
            </ul>
          </div>
          <div className="right">
-          <Link to="/cart" className="nav-link">
+          <Link to="/cart" className="cart-link">
            {
                props.cart?.length ? (
                     <div className="cartWithQuant">

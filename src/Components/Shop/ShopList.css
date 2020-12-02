@@ -5,3 +5,11 @@
      width: 930px;
      margin: auto;
 }
+
+@media (max-width: 450px) {
+     .ShopList {
+          width: 100%;
+          padding: 0;
+          flex-direction: column;
+     }
+}

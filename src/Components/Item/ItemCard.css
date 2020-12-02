@@ -120,3 +120,24 @@
      font-weight: 600;
      font-size: var(--bodyTxt);
 }
+
+@media (max-width: 450px) {
+     .itemImage {
+          height: 85px;
+          width: 85px;
+     }
+     .add {
+          width: 85px;
+     }
+     .minus {
+          width: 28px;
+     }
+     .plus {
+          width: 28px;
+          left: 67px;
+     }
+     .quant {
+          width: 29px;
+          left: 38px;
+     }
+}

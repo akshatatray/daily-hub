@@ -3,7 +3,7 @@
      width: 930px;
      padding-top: 120px;
      padding-bottom: 30px;
-     margin: 100px auto 30px auto;
+     margin: 90px auto 30px auto;
      border-radius: var(--bdRd);
      background-color: var(--secColor);
      box-shadow: 5px 5px 20px -10px black;
@@ -33,4 +33,26 @@
      top: 40px;
      right: 45px;
      cursor: pointer;
+}
+
+@media (max-width: 450px) {
+     .Menu {
+          width: 96%;
+          padding: 120px 0 30px 0;
+     }
+     .MenuShopLogo {
+          top: 20px;
+          left: 20px;
+     }
+     .MenuShopName {
+          top: 30px;
+          left: 100px;
+          width: 200px;
+     }
+     .back {
+          top: 30px;
+          right: 20px;
+          width: 35px;
+          height: 35px;
+     }
 }
