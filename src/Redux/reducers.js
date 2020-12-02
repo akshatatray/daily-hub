@@ -1,15 +1,16 @@
 const initState = {
-     cart: [],
-     shops: [],
-     items: [],
 };
 
 const reducers = (state = initState, action) => {
      switch (action.type) {
           case "LOADING":
                return { ...state, loading: true };
-               case "UNLOADING":
-                    return { ...state, loading: false };
+          case "UNLOADING":
+               return { ...state, loading: false };
+          case "SIGN_IN":
+               return { ...state, user: action.payload, isLoggedIn: true };
+          case "GOOGLE_SIGN_IN":
+               return { ...state, user: action.payload, isLoggedIn: true };
           case "GET_SHOPS":
                return { ...state, shops: action.payload };
           case "GET_ITEMS":

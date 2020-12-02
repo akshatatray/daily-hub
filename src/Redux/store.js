@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import reducers from './reducers';
 
 const initialState = {
+  isLoggedIn: false,
   cart: [],
   shops: [],
   items: [],
