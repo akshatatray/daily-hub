@@ -7,6 +7,7 @@ const initialState = {
   cart: [],
   shops: [],
   items: [],
+  loading: false,
 };
 
 const middleware = [thunk];

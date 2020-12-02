@@ -6,6 +6,10 @@ const initState = {
 
 const reducers = (state = initState, action) => {
      switch (action.type) {
+          case "LOADING":
+               return { ...state, loading: true };
+               case "UNLOADING":
+                    return { ...state, loading: false };
           case "GET_SHOPS":
                return { ...state, shops: action.payload };
           case "GET_ITEMS":
