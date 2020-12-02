@@ -13,11 +13,23 @@ const reducers = (state = initState, action) => {
           case "GET_MENU_INFO":
                return { ...state, menuInfo: action.payload };
           case "ADD_ITEM":
-               return { ...state, cart: [...state.cart, action.payload] };
+               let flag = 0;
+               for (let i = 0; i < state.cart.length; i += 1) {
+                    if (state.cart[i].id === action.payload.id) {
+                         state.cart[i].quantity += 1;
+                         flag += 1;
+                    }
+               }
+               if (flag !== 0) {
+                    return { ...state, cart: [...state.cart] };
+               } else {
+                    return { ...state, cart: [...state.cart, action.payload] };
+               }
           case "PLUS":
                for (let i = 0; i < state.cart.length; i += 1) {
                     if (state.cart[i].id === action.payload) {
                          state.cart[i].quantity += 1;
+                         return { ...state, cart: [...state.cart] };
                     }
                }
                return { ...state, cart: [...state.cart] };

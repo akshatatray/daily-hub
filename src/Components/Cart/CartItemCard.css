@@ -3,9 +3,10 @@
      width: calc(100% - 20px);
      max-width: 450px;
      height: 140px;
-     margin: 10px auto;
-     border-radius: 5px;
+     margin: 15px auto;
+     border-radius: var(--bdRd);
      background-color: var(--card);
+     box-shadow: 5px 5px 20px -10px black;
 }
 .CartItemImage {
      position: absolute;
@@ -13,7 +14,7 @@
      left: 10px;
      height: 120px;
      width: 120px;
-     border-radius: 5px;
+     border-radius: var(--bdRd);
 }
 .CartItemName {
      position: absolute;
@@ -62,7 +63,7 @@
      padding: 5px;
      width: 10px;
      background-color: var(--btnColor);
-     border-radius: 8px;
+     border-radius: 5px;
      bottom: 10px;
      right: 10px;
      font-size: var(--bodyTxt);
