@@ -1,4 +1,23 @@
 .Cart {
      position: relative;
-     padding-top: 60px;
+     width: 930px;
+     padding-top: 120px;
+     padding-bottom: 30px;
+     margin: 100px auto 30px auto;
+     border-radius: var(--bdRd);
+     background-color: var(--secColor);
+     box-shadow: 5px 5px 20px -10px black;
+}
+.CartHeading {
+     position: absolute;
+     margin: 0;
+     top: 25px;
+     left: 50%;
+     transform: translate(-50%, 0);
+     font-size: var(--title);
+     font-weight: 500;
+     font-family: var(--interFont);
+     font-style: normal;
+     color: var(--txtColor);
+     letter-spacing: 1px;
 }

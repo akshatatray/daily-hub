@@ -17,9 +17,9 @@
 .ShopName {
      position: absolute;
      margin: 0;
-     bottom: 92px;
+     bottom: 100px;
      right: 25px;
-     width: 200px;
+     width: 225px;
      text-overflow: ellipsis;
      overflow: hidden;
      white-space: nowrap;

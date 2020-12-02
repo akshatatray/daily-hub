@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Navbar.css';
 
 import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const Navbar = (props) => {
-     useEffect(() => {
-          console.log(props );
-     }, []);
      return (
        <div className="Navbar">
          <div className="left"></div>
