@@ -1,0 +1,102 @@
+.SignIn {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     border-radius: var(--bdRd);
+     background-color: var(--secColor);
+     width: 335px;
+     padding: 15px;
+}
+.SignInHeading {
+     font-family: var(--interFont);
+     margin: 0 0 5px 15px;
+     font-size: 30px;
+     font-weight: 400;
+     color: var(--primColor);
+     transition: all .25s;
+}
+.SignInForm {
+     padding: 10px;
+}
+.InputFeild {
+     padding: 22px 15px 4px 15px;
+     height: 16px;
+     width: calc(100% - 30px);
+     border: none;
+     border-radius: var(--bdRd);
+     font-size: 16px;
+     margin: 5px 0;
+}
+.InputFeild:focus {
+     outline: 0;
+}
+.InputFeild::placeholder {
+     color: transparent;
+}
+.InputLabel {
+     position: absolute;
+     display: block;
+     opacity: 1;
+     width: 150px;
+     margin: 0;
+     color: rgb(110, 110, 110);
+     font-size: 16px;
+     transform: translate(15px, -37px);
+     transform-origin: 0 0;
+     transition: all .25s;
+}
+.InputFeild:focus + .InputLabel,
+.InputFeild:not(:placeholder-shown) + .InputLabel {
+     font-size: 12px;
+     color: rgb(50, 50, 50);
+     transform: translate(15px, -44px);
+}
+.btn {
+     border-radius: var(--bdRd);
+     border: none;
+     height: 42px;
+     background-color: var(--btnColor);
+     color: white;
+     font-size: 15px;
+     font-weight: 600;
+     letter-spacing: 1px;
+}
+.SignInBtn {
+     width: 100%;
+     margin: 5px 0;
+     font-family: var(--interFont);
+}
+.sub {
+     margin-top: 30px;
+     text-align: center;
+     font-size: 14px;
+     color: white;
+     font-weight: 500;
+     font-family: var(--interFont);
+}
+.GoogleIcon {
+     width: calc(100% - 34px);
+     height: 42px;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     border-radius: var(--bdRd);
+     border-top: 2px solid #E53935;
+     border-right: 2px solid #FBC02D;
+     border-bottom: 2px solid #4CAF50;
+     border-left: 2px solid #1E88E5;
+     cursor: pointer;
+}
+.gmailSVG {
+     margin: auto;
+}
+.Alert {
+     position: relative;
+     padding: .75rem 1rem;
+     border-radius: .25rem;
+     color: #721c24;
+     background-color: #f8d7da;
+     transition: all .25s;
+}
