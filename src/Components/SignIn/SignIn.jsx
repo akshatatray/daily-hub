@@ -2,23 +2,34 @@ import React, { useState } from 'react';
 import './SignIn.css';
 
 import { useHistory } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { signInWithEmail, signInWithGoogle } from '../../Redux/actions';
+import { useAuth } from "../../Context/AuthContext";
 
 const SignIn = (props) => {
      const [email, setEmail] = useState('');
      const [password, setPassword] = useState('');
+     const [err, setErr] = useState('');
+     const { signin, googleSignin } = useAuth();
      const history = useHistory();
 
      const handleSubmit = async (e) => {
           e.preventDefault();
-          await props.signInWithEmail(email, password);
-          history.push('/');
+          try {
+               setErr('');
+               await signin(email, password);
+               history.push("/");
+          } catch {
+               setErr('Failed to Sign in. Please try again.')
+          }
      }
 
      const handleGoogleSignIn = async () => {
-          await props.signInWithGoogle();
-          history.push('/');
+          try {
+               setErr('');
+               await googleSignin();
+               history.push("/");
+          } catch {
+               setErr('Failed to Sign in. Please try again.')
+          }
      }
      return (
           <div className="SignIn">
@@ -27,9 +38,9 @@ const SignIn = (props) => {
                </h1>
                <form className="SignInForm" onSubmit={ handleSubmit }>
                     {
-                         props.err &&
+                         err &&
                          <div className="Alert">
-                              { props.err }
+                              { err }
                          </div>
                     }
                     <input 
@@ -97,16 +108,4 @@ const SignIn = (props) => {
      )
 }
 
-const mapStateWithProps = (state) => {
-     return {
-          isLoggedIn: state.isLoggedIn,
-          err: state.error,
-     }
-}
-
-const mapActionWithProps = {
-     signInWithEmail,
-     signInWithGoogle,
-}
-
-export default connect(mapStateWithProps, mapActionWithProps) (SignIn);
+export default SignIn;

@@ -11,6 +11,8 @@ const reducers = (state = initState, action) => {
                return { ...state, user: action.payload, isLoggedIn: true };
           case "GOOGLE_SIGN_IN":
                return { ...state, user: action.payload, isLoggedIn: true };
+          case "SIGN_OUT":
+               return { ...state, user: {}, isLoggedIn: false };
           case "GET_SHOPS":
                return { ...state, shops: action.payload };
           case "GET_ITEMS":

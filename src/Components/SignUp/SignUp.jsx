@@ -2,24 +2,27 @@ import React, { useState } from 'react';
 import './SignUp.css';
 
 import { useHistory } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { createUserWithEmail } from '../../Redux/actions';
+import { useAuth } from "../../Context/AuthContext";
 
 const SignUp = (props) => {
      const [email, setEmail] = useState('');
      const [password, setPassword] = useState('');
      const [repassword, setRePassword] = useState('');
      const [err, setErr] = useState('');
+     const { signup } = useAuth();
      const history = useHistory();
 
      const handleSubmit = async (e) => {
           e.preventDefault();
-          if (password === repassword) {
-               setErr("");
-               await props.createUserWithEmail(email, password);
-               history.push('/');
-          } else {
-               setErr("Passwords do not match!");
+          if (password !== repassword) {
+            return setErr("Passwords do not match!");
+          }
+          try {
+            setErr("");
+            await signup(email, password);
+            history.push("/");
+          } catch {
+            setErr("Failed to sign up. Please try again!");
           }
      }
 
@@ -79,14 +82,4 @@ const SignUp = (props) => {
      )
 }
 
-const mapStateWithProps = (state) => {
-     return {
-          isLoggedIn: state.isLoggedIn,
-     }
-}
-
-const mapActionWithProps = {
-     createUserWithEmail,
-}
-
-export default connect(mapStateWithProps, mapActionWithProps) (SignUp);
+export default SignUp;

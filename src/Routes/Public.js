@@ -1,22 +1,17 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { useAuth } from '../Context/AuthContext';
 
-const Public = ({ component: Component, isLoggedIn, ...rest }) => {
+const Public = ({ component: Component, ...rest }) => {
+     const { currentUser } = useAuth();
      return (
           <Route
                { ...rest }
                render={props => {
-                    return isLoggedIn ? <Redirect to="/" /> : <Component { ...props } />
+                    return currentUser ? <Redirect to="/" /> : <Component { ...props } />
                }}
           ></Route>
      );
 }
 
-const mapStateWithProps = (state) => {
-     return {
-          isLoggedIn: state.isLoggedIn,
-     }
-}
-
-export default connect(mapStateWithProps) (Public);
+export default Public;

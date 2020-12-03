@@ -180,3 +180,27 @@ export const createUserWithEmail = (email, password) => (dispatch) => {
       });
     });
 }
+
+export const signOut = () => (dispatch) => {
+  dispatch({
+    type: "LOADING",
+  });
+  auth.signOut()
+    .then(res => {
+      dispatch({
+        type: "SIGN_OUT",
+      });
+      dispatch({
+        type: "UNLOADING",
+      });
+    })
+    .catch(err => {
+      dispatch({
+        type: "ERR",
+        payload: err,
+      });
+      dispatch({
+        type: "UNLOADING",
+      });
+    });
+}
