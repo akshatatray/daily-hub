@@ -26,6 +26,12 @@ const SignIn = (props) => {
                     Welcome Back!
                </h1>
                <form className="SignInForm" onSubmit={ handleSubmit }>
+                    {
+                         props.err &&
+                         <div className="Alert">
+                              { props.err }
+                         </div>
+                    }
                     <input 
                          type="email" 
                          className="InputFeild" 
@@ -94,6 +100,7 @@ const SignIn = (props) => {
 const mapStateWithProps = (state) => {
      return {
           isLoggedIn: state.isLoggedIn,
+          err: state.error,
      }
 }
 

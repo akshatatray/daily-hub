@@ -112,8 +112,9 @@ export const signInWithEmail = (email, password) => (dispatch) => {
     .then(user => {
       dispatch({
         type: "SIGN_IN",
-        payload: user,
+        payload: user.user,
       });
+      console.log(user);
       dispatch({
         type: "UNLOADING",
       });
@@ -138,6 +139,31 @@ export const signInWithGoogle = () => (dispatch) => {
     .then(res => {
       dispatch({
         type: "GOOGLE_SIGN_IN",
+        payload: res.user,
+      });
+      dispatch({
+        type: "UNLOADING",
+      });
+    })
+    .catch(err => {
+      dispatch({
+        type: "ERR",
+        payload: err,
+      });
+      dispatch({
+        type: "UNLOADING",
+      });
+    });
+}
+
+export const createUserWithEmail = (email, password) => (dispatch) => {
+  dispatch({
+    type: "LOADING",
+  });
+  auth.createUserWithEmailAndPassword(email, password)
+    .then(res => {
+      dispatch({
+        type: "SIGN_IN",
         payload: res.user,
       });
       dispatch({

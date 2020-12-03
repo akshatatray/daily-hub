@@ -50,6 +50,8 @@ const reducers = (state = initState, action) => {
                     }
                }
                return { ...state, cart: [...state.cart], };
+          case "ERR":
+               return { ...state, error: action.payload }
           default:
                return state;
      }
