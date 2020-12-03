@@ -1,0 +1,56 @@
+.ProfileCard {
+     position: fixed;
+     left: 10px;
+     top: 70px;
+     width: 300px;
+     height: 317px;
+     border-radius: var(--bdRd);
+     background-color: var(--secColor);
+     box-shadow: 5px 5px 20px -15px black;
+}
+.ProfileImage {
+     position: absolute;
+     top: 25px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 100px;
+     height: 100px;
+     border-radius: var(--bdRd);
+}
+.UserName {
+     position: absolute;
+     margin: 0;
+     top: 150px;
+     left: 25px;
+     width: 275px;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+     font-size: var(--title);
+     font-weight: 400;
+     color: var(--primColor);
+}
+.UserMail {
+     position: absolute;
+     margin: 0;
+     top: 200px;
+     left: 25px;
+     width: 275px;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+     font-size: var(--subT);
+     font-weight: 400;
+     color: var(--primColor);
+}
+.SignOut {
+     position: absolute;
+     top: 250px;
+     left: 25px;
+     width: calc(100% - 50px);
+}
+@media (max-width: 450px) {
+     .ProfileCard {
+          width: calc(100% - 20px);
+     }
+}
